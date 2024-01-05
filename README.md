@@ -9,6 +9,6 @@ Students are expected to:
 Student Info
 =========================
 
-* Student Name: Tran Qunag Ha 
+* Student Name: Tran Quang Ha 
 * Student ID: 22BI13145
 
