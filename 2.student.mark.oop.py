@@ -70,4 +70,10 @@ class ManagementProgram:
 
     def input_student_mark(self):
         marks = {}
-        print(f"Enter student's mark for ")
+        print(f"Enter student's mark for {selected_course.name}: ") 
+        for student in students:
+            mark = float(input(f"Enter mark for {student.name} ({student.id}): "))
+            marks[student.id] = mark
+        return marks
+
+    

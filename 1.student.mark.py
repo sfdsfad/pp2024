@@ -18,11 +18,11 @@ def input_num_of_courses():
     return int(num_of_course)
 
 def inputOneCourse(): 
-    id = input("Enter course ID: ")
-    name = input("Enter course name: ")
+    course_id = input("Enter course ID: ")
+    course_name = input("Enter course name: ")
     course = {
-        'id': id,
-        'name': name
+        'id': course_id,
+        'name': course_name
     }
     return course
 
@@ -39,3 +39,17 @@ def selectCourseAndInputStudentMarks(course, students):
         }
         marks[course['id']] += [studentMark]
 
+def list_courses(courses):
+    print("\nList of courses:")
+    for course in courses:
+        print(f"{course['id']}: {course['name']}")
+
+def list_students(students):
+    print("\nList of students:")
+    for student in students:
+        print(f"{student['id']}: {student['name']}")
+
+def show_student_marks(students, selected_course, marks):
+    print(f"\nStudent marks for course {selected_course['name']}:")
+    for student in students:
+        print(f"{student['name']} ({student['id']}): {marks.get(student['id'], 'N/A')}")
